@@ -11,6 +11,7 @@
 		2E496C5828DB21AD003CB7B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E496C5728DB21AD003CB7B3 /* ContentView.swift */; };
 		2E496C5A28DB21AF003CB7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E496C5928DB21AF003CB7B3 /* Assets.xcassets */; };
 		2E496C5D28DB21AF003CB7B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E496C5C28DB21AF003CB7B3 /* Preview Assets.xcassets */; };
+		2E496C6528DB2442003CB7B3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 2E496C6428DB2442003CB7B3 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E496C6528DB2442003CB7B3 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "QR-Scanner-SwiftUI";
+			packageProductDependencies = (
+				2E496C6428DB2442003CB7B3 /* CodeScanner */,
+			);
 			productName = "QR-Scanner-SwiftUI";
 			productReference = 2E496C5228DB21AD003CB7B3 /* QR-Scanner-SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 2E496C4928DB21AD003CB7B3;
+			packageReferences = (
+				2E496C6328DB2442003CB7B3 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 2E496C5328DB21AD003CB7B3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E496C6328DB2442003CB7B3 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E496C6428DB2442003CB7B3 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E496C6328DB2442003CB7B3 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E496C4A28DB21AD003CB7B3 /* Project object */;
 }
