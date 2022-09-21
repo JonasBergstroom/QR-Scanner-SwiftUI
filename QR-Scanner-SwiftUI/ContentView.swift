@@ -19,10 +19,18 @@ struct ContentView: View {
         }
     }
 
-    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 10) {
+            Text(scannedCode)
+                .aspectRatio(1, contentMode: .fit)
+                .padding()
+            Button("Scan a new QR-Code") {
+                self.isPresentingScanner = true
+            }
+            .fullScreenCover(isPresented: $isPresentingScanner) {
+                self.scannerSheet
+            }
+        }
     }
 }
 
