@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import CodeScanner
 
 struct ContentView: View {
+    @State var isPresentingScanner = false
+    @State var scannedCode: String = "Get Started!"
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
