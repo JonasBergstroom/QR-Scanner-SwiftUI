@@ -12,6 +12,14 @@ struct ContentView: View {
     @State var isPresentingScanner = false
     @State var scannedCode: String = "Get Started!"
     
+    
+    var scannerSheet: some View {
+        ZStack {
+            
+        }
+    }
+
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
