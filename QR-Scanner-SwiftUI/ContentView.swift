@@ -17,18 +17,31 @@ struct ContentView: View {
     var scannerSheet: some View {
         ZStack {
             VStack {
-            Spacer()
+                Spacer()
                 HStack {
-                CodeScannerView(
-                    codeTypes: [.qr],
-                    completion: { result in
-                        if case let .success(code) = result {
-                            self.scannedCode = code.string
-                            self.isPresentingScanner = false
-                                }
+                    CodeScannerView(
+                        codeTypes: [.qr],
+                        completion: { result in
+                            if case let .success(code) = result {
+                                self.scannedCode = code.string
+                                self.isPresentingScanner = false
                             }
-                        )
+                        }
+                    )
                 }
+                .padding(.horizontal)
+                Spacer()
+                Button(action: {
+                    toggleTorch(on: true)
+                }) {
+                    Text("Flash Light")
+                        .font(.system(size: 50))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .padding(.horizontal)
+                }
+                .background(Color.blue)
+                Spacer()
             }
         }
     }
