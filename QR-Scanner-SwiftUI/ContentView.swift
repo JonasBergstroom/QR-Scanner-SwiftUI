@@ -13,6 +13,7 @@ struct ContentView: View {
     @State var isPresentingScanner = false
     @State var scannedCode: String = "Get Started!"
     
+    @State var torch = false
     
     var scannerSheet: some View {
         ZStack {
@@ -32,7 +33,8 @@ struct ContentView: View {
                 .padding(.horizontal)
                 Spacer()
                 Button(action: {
-                    toggleTorch(on: true)
+                    torch.toggle()
+                    toggleTorch(on: torch)
                 }) {
                     Text("Flash Light")
                         .font(.system(size: 50))
